@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\gate">
+      <UniqueIdentifier>{7173ce6e-b092-43b6-a15f-92accb7d42ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\op">
+      <UniqueIdentifier>{89b99c16-5f0d-4cf3-956b-37f58478e206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{81ff8132-7dbe-41d5-b4f1-e629f8aafd49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\wire">
+      <UniqueIdentifier>{ea0d8eec-31c5-422d-80c4-0be7e3a27a30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{386fa488-2ff0-4703-afb3-cd1ea1f76bfb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="op_primative_types.h">
+      <Filter>Header Files\op</Filter>
+    </ClInclude>
+    <ClInclude Include="op_primatives.h">
+      <Filter>Header Files\op</Filter>
+    </ClInclude>
+    <ClInclude Include="op_primatives.hpp">
+      <Filter>Header Files\op</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_button.h">
+      <Filter>Header Files\gate</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_primatives.h">
+      <Filter>Header Files\gate</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_state.h">
+      <Filter>Header Files\gate</Filter>
+    </ClInclude>
+    <ClInclude Include="includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_base.h">
+      <Filter>Header Files\gate</Filter>
+    </ClInclude>
+    <ClInclude Include="utils_math.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="wire_base.h">
+      <Filter>Header Files\wire</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_primative_inputs.h">
+      <Filter>Header Files\gate</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_base.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_element_type.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
