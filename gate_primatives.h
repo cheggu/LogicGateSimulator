@@ -10,27 +10,35 @@ public:
 		switch (type) {
 		case (PrimativeGateType::AND):
 			operation = primative_operations::AND;
+			type = PrimativeGateType::AND;
 			break;
 		case (PrimativeGateType::OR):
 			operation = primative_operations::OR;
+			type = PrimativeGateType::OR;
 			break;
 		case (PrimativeGateType::NOT):
+			type = PrimativeGateType::NOT;
 			not_op = true;
 			operation = NULL;
 			break;
 		case (PrimativeGateType::NAND):
 			operation = primative_operations::NAND;
+			type = PrimativeGateType::NAND;
 			break;
 		case (PrimativeGateType::NOR):
 			operation = primative_operations::NOR;
+			type = PrimativeGateType::NOR;
 			break;
 		case (PrimativeGateType::XOR):
 			operation = primative_operations::XOR;
+			type = PrimativeGateType::XOR;
 			break;
 		case (PrimativeGateType::XNOR):
 			operation = primative_operations::XNOR;
+			type = PrimativeGateType::XNOR;
 			break;
 		case (PrimativeGateType::NOP):
+			type = PrimativeGateType::NOP;
 			nop = true;
 			operation = NULL;
 			break;

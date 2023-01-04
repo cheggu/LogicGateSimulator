@@ -1,7 +1,7 @@
 #pragma once
 
 enum ui_element_type {
-	BUTTON,
+	UIBUTTON,
 	GATE,
 	TEXT,
 	TEXTBOX

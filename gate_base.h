@@ -4,9 +4,12 @@
 #include "gate_state.h"
 #include "op_primatives.h"
 #include "utils_math.h"
+#include "SFML/Graphics.hpp"
 
 class BaseGate {
 protected:
+	sf::CircleShape drawable;
+
 	std::vector<std::reference_wrapper<BaseGate>> children = {};
 
 	std::vector<std::reference_wrapper<BaseGate>> a_parents = {};
@@ -20,12 +23,14 @@ protected:
 	bool nop = false;
 	bool not_op = false;
 
+	PrimativeGateType type;
+
 	GateState state = OFF;
 
 	GateState calc_state_from_parents(InputType input) {
 		if (input == InputType::A) {
 			for (auto parent : a_parents) {
-				std::cout << parent.get().state << std::endl;
+				//std::cout << parent.get().state << std::endl;
 				if (parent.get().state == ON) {
 					return ON;
 				}
@@ -34,7 +39,7 @@ protected:
 		}
 		else {
 			for (auto parent : b_parents) {
-				std::cout << parent.get().state << std::endl;
+				//std::cout << parent.get().state << std::endl;
 				if (parent.get().state == ON) {
 					return ON;
 				}
@@ -51,6 +56,36 @@ public:
 
 	std::string getName() {
 		return name;
+	}
+
+	std::string getType() {
+		switch (type) {
+		case 0:
+			return "AND";
+		case 1:
+			return "OR";
+		case 2:
+			return "NOT";
+		case 3:
+			return "NAND";
+		case 4:
+			return "NOR";
+		case 5:
+			return "XOR";
+		case 6:
+			return "XNOR";
+		case 7:
+			return "NOP";
+		case 8:
+			return "BUTTON";
+		default:
+			return "?";
+
+		}
+	}
+
+	void printState() {
+		std::cout << "-- STATE STATUS OF GATE '" << getName() << "' (type " << getType() << ") -- " << getState() << std::endl;
 	}
 
 	void printAllChildren() {
@@ -82,4 +117,24 @@ public:
 			other.b_parents.push_back(*this);
 		}
 	}
+
+	bool inBounds(sf::Vector2f pointer) {
+		if (drawable.getGlobalBounds().contains(pointer)) {
+			return true;
+		}
+		return false;
+	}
+
+	void setPosition(float x, float y) {
+		drawable.setPosition(x, y);
+	}
+
+	sf::CircleShape* getDrawable() {
+		return &drawable;
+	}
+
+	virtual void click() {
+		std::cout << "foopbar" << std::endl;
+	};
+
 };

@@ -8,5 +8,6 @@ enum PrimativeGateType {
 	NOR,
 	XOR,
 	XNOR,
-	NOP
+	NOP,
+	BUTTON
 };

@@ -9,4 +9,7 @@
 
 #include "wire_base.h"
 
+#include "ui_base.h"
+#include "ui_element_list.h"
+
 #include <vector>

@@ -74,5 +74,11 @@
     <ClInclude Include="ui_element_type.h">
       <Filter>Header Files\ui</Filter>
     </ClInclude>
+    <ClInclude Include="ui_button.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_element_list.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
